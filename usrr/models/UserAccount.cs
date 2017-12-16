@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PIPMIX.models
+namespace Pipmix.Models
 {
 	public class UserAccount
 	{
@@ -25,6 +25,13 @@ namespace PIPMIX.models
 
 		public UserAccount(string firstname, string lastname, string email)
 		{
+
+			if (string.IsNullOrWhiteSpace(email))
+			{
+
+			}
+
+
 			Id = Guid.NewGuid();
 			FirstName = firstname;
 			LastName = lastname;
