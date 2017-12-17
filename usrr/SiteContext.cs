@@ -12,6 +12,8 @@ namespace Pipmix
 
 		}
 		public DbSet<UserAccount> UserAccounts { get; set; }
-
+		//public DbSet<ShopItem> ShopItems { get; set; }
+		//public DbSet<ContentTag> ContentTags { get; set; }
+		//public DbSet<ShopOrder> ShopOrders { get; set; }
 	}
 }

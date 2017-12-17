@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,8 +11,13 @@ namespace Pipmix.Models
 
 
 
-		public Guid Id { get; protected set; }
+		public int Id { get; protected set; }
+		[Required]
+		[StringLength(30, ErrorMessage = "User Name too long ")]
+		public string UserAccountName { get; protected set; }
+		[Required]
 		public string Email { get; protected set; }
+		[Required]
 		public string Password { get; protected set; }
 		public string FirstName { get; protected set; }
 		public string LastName { get; protected set; }
@@ -32,7 +38,7 @@ namespace Pipmix.Models
 			}
 
 
-			Id = Guid.NewGuid();
+			
 			FirstName = firstname;
 			LastName = lastname;
 			Email = email.ToLowerInvariant();

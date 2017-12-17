@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace usrr
+namespace Pipmix.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /<controller>/
+
         public IActionResult Index()
         {
             return View();
