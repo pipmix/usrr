@@ -1,0 +1,25 @@
+﻿
+@model GameInfo
+
+@{
+	ViewData["Title"] = "Browse";
+}
+
+
+
+<div class="content-container">
+
+	<div class="item-container">
+		<div class="item-text">Title:</div><div class="item-content">@Model.Name </div>
+		<div class="item-text">Developer:</div><div class="item-content">@Model.Developer</div>
+		<div class="item-text">Publisher:</div><div class="item-content">@Model.Publisher</div>
+		<div class="item-text">Genre:</div><div class="item-content">@Model.Genre</div>
+		<div class="item-text">Price:</div><div class="item-content">@Model.Price</div>
+		<div class="item-text item-description">Description:</div><div class="item-content item-description">@Model.Description</div>
+	</div>
+
+
+	</div>
+
+
+

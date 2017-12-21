@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pipmix.Models;
+using Pipmix.Data;
 
 namespace Pipmix
 {
@@ -34,13 +35,15 @@ namespace Pipmix
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddMvc();
-			services.AddDbContext<SiteContext>(options =>
+			services.AddDbContext<PipmixContext>(options =>
 				options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 		}
 
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
+
+			app.UseDeveloperExceptionPage();
 			app.UseStaticFiles();
 			app.UseMvc(routes =>
 			{

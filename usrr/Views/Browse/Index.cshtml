@@ -1,0 +1,37 @@
+﻿
+@model IEnumerable<Pipmix.Models.GameInfo>
+
+@{
+	ViewData["Title"] = "Browse";
+}
+
+
+	<div class="content-container font-medium">
+		Browse Titles:
+	</div>
+
+	<div class="table-container">
+		<div class="table-grid" role="grid">
+
+			<div class="table-row table-head">
+				<div class="table-cell"> Name </div>
+				<div class="table-cell"> Publisher </div>
+				<div class="table-cell"> Developer </div>
+				<div class="table-cell"> Genre </div>
+			</div>
+
+
+			@foreach (var item in Model)
+			{
+
+				<div class="table-row">
+					
+					<div class="table-cell"><a asp-action="Item" asp-route-id="@item.Id"> @item.Name </a> </div>
+					<div class="table-cell"> @item.Publisher </div>
+					<div class="table-cell"> @item.Developer </div>
+					<div class="table-cell"> @item.Genre </div>
+				</div>
+			}
+
+		</div>
+	</div>

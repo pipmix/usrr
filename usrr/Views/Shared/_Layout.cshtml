@@ -3,32 +3,48 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>@ViewData["Title"]</title>
 		<link rel="stylesheet" href="~/css/site.css" />
 	</head>
 	<body>
 
-		<div class="section-top">
-			<div class="row-nav-bar">
-				<span class="button-nav">Home</span>
-				<span class="button-nav">Browse</span>
-				<span class="button-nav">Blog</span>
-				<span class="button-nav">Account</span>
+		<header>
 
+		</header>
+		<nav>
+			<div class="section-container">
+				<div class="header-row">
+					<div class="header-element font-medium">PIPMIX DOTNET</div>
+					<div class="header-element"></div>
+				</div>
+				<div class="header-row">
+					<div class="header-element header-button-main header-left header-selected">.Net Projects</div>
+					<a href="http://www.pipmix.com/index.php"><div class="header-element header-button-main header-deselected">Other Projects</div></a>
+					<a href="http://www.pipmix.com/about.php"><div class="header-element header-button-main header-deselected">Resume</div></a>
+					<div class="header-element header-button-main header-right"></div>
+
+				</div>
 			</div>
-			<div class="row-nav-text">
-				Home
+
+
+
+		</nav>
+
+		<main>
+			<div class="section-container">
+				<div class="section-container-2">
+					@RenderBody()
+					</div>
+				</div>
+		</main>
+
+
+		<footer>
+			<div class="section-container">
+				© Philip Escobedo 2017
 			</div>
+</footer>
 
 
-		</div>
-
-		<div class="section-middle">
-			@RenderBody()
-		</div>
-
-		<div class="section-bottom"> </div>
-
-
-		
 	</body>
 </html>
